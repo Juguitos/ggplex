@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Googolplex - Productos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+    .product-item h3,
+    .product-item p {
+      margin-top: 10px;
+    }
+    
+    #show-more-button {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="img/logo.png" alt="Logo de mi sitio web">
+    </div> 
+    <nav>
+      <ul class="animated-list">
+        <li><a class="menu-link" href="index.html">Inicio</a></li>
+        <li><a class="menu-link" href="acerca.html">Nosotros</a></li>
+        <li><a class="menu-link" href="productos.html">Productos</a></li>
+        <li><a class="menu-link" href="contacto.html">Contacto</a></li>
+      </ul> 
+    </nav>
+  </header>
+  
+  <main>
+    <section id="products">
+      <h2>Nuestros productos</h2>
+      <div class="product-container">
+        <div class="product-item">
+          <h3>Adaptador universal para casco.</h3>
+          <img src="img/productos/ADAPTADOR UNIVERSAL PARA CASCO.jpg" alt="Producto 1">
+          <p>$82.75</p>
+        </div>
+        <div class="product-item">
+          <h3>Banderín de malla con bastón de madera.</h3>
+          <img src="img/productos/BANDERIN DE MALLA CON BASTON DE MADERA.webp" alt="Producto 2">
+          <p>$60.36</p>
+        </div>
+        <div class="product-item">
+          <h3>Banderin rigido para tractocamion.</h3>
+          <img src="img/productos/BANDERIN RIGIDO PARA TRACTOCAMION.jpg" alt="Producto 3">
+          <p>$111.95</p>
+        </div>
+        <div class="product-item">
+          <h3>Bandola de poliester de 1.83M.</h3>
+          <img src="img/productos/BANDOLA DE POLIESTER DE 1.83 M.webp" alt="Producto 4">
+          <p>$2021.45</p>
+        </div>
+        <div class="product-item">
+          <h3>Barrera bicentenario 15K p/rellenar aren.</h3>
+          <img src="img/productos/BARRERA BICENTENARIO 15K P RELLENAR AREN.jpg" alt="Producto 5">
+          <p>$2706.57</p>
+        </div>
+        <div class="product-item">
+          <h3>Barrera tipo 2013 13K sin reflejantes.</h3>
+          <img src="img/productos/BARRERA TIPO 2013 13K SIN REFLEJANTES.jpg" alt="Producto 6">
+          <p>$2518.51</p>
+        </div>
+        <div class="product-item">
+          <h3>Barricada tipo trafisit base de plastico.</h3>
+          <img src="img/productos/BARRICADA TIPO TRAFISIT BASE D PLASTICO.webp" alt="Producto 7">
+          <p>$1446.35</p>
+        </div>
+        <div class="product-item">
+          <h3>Base plastica para trafitambo amarilla.</h3>
+          <img src="img/productos/BASE PLASTICA PARA TRAFITAMBO AMARILLA.jpg" alt="Producto 8">
+          <p>$575.24</p>
+        </div>
+        <div class="product-item">
+          <h3>Bateria de reemplazo p/lampara p/trfita.</h3>
+          <img src="img/productos/BATERIA DE REEMPLAZO P-LAMPARA P-TRAFITA.jpeg" alt="Producto 9">
+          <p>$103.65</p>
+        </div>
+        <div class="product-item">
+          <h3>Borcegui c/casco de polia suela t/terren.</h3>
+          <img src="img/productos/BORCEGUI C-CASCO DE POLIA SUELA T-TERREN.jpg" alt="Producto 10">
+          <p>$550.99</p>
+        </div>
+        <div class="product-item">
+          <h3>Borcegui c/casco de polia suela t/poliur.</h3>
+          <img src="img/productos/BORCEGUI C-CASCO POLIA SUELA POLIUR-PTU.jpg" alt="Producto 11">
+          <p>$1000.19</p>
+        </div>
+        <!-- Agrega más elementos aquí -->
+      </div>
+      <button id="show-more-button">Ver más artículos</button>
+    </section>    
+  </main>
+
+  <footer>
+    <p>Derechos reservados © 2023</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var productContainer = document.querySelector('.product-container');
+      var showMoreButton = document.getElementById('show-more-button');
+      
+      var productItems = Array.from(productContainer.getElementsByClassName('product-item'));
+      var itemsToShow = 10;
+      
+      if (productItems.length > itemsToShow) {
+        showMoreButton.style.display = 'block';
+        
+        productItems.forEach(function(item, index) {
+          if (index >= itemsToShow) {
+            item.style.display = 'none';
+          }
+        });
+        
+        showMoreButton.addEventListener('click', function() {
+          var hiddenItems = productItems.filter(function(item) {
+            return item.style.display === 'none';
+          });
+          
+          for (var i = 0; i < itemsToShow; i++) {
+            if (hiddenItems[i]) {
+              hiddenItems[i].style.display = 'block';
+            }
+          }
+          
+          if (hiddenItems.length <= itemsToShow) {
+            showMoreButton.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

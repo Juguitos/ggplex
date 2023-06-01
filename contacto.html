@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Googolplex - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+      #mapid { height: 400px; }
+    </style>
+  </head>  
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="img/logo.png" alt="Logo de mi sitio web">
+    </div> 
+    <nav>
+      <ul class="animated-list">
+        <li><a class="menu-link" href="index.html">Inicio</a></li>
+        <li><a class="menu-link" href="acerca.html">Nosotros</a></li>
+        <li><a class="menu-link" href="productos.html">Productos</a></li>
+        <li><a class="menu-link" href="contacto.html">Contacto</a></li>
+      </ul> 
+    </nav>
+  </header>
+  
+  <main>
+    <section id="contacts">
+      <h2>Contacto</h2>
+      <p>
+        <img src="img/telefono.png" alt="Teléfono" width="17px" height="17px">
+         +52 228 816 6736
+      </p>
+      <p>
+        <img src="img/ubi.png" alt="Ubicacion" width="17px" height="17px">
+        Cam. a Las Haciendas #5, Local 1, Centro, 91500 Coatepec, Ver.
+      </p>
+      <p>
+        <img src="img/correo.png" alt="Correo" width="17px" height="17px">
+         gogolpex007-@hotmail.com
+      </p>
+
+
+
+      <div id="mapid"></div>
+      <script>
+        // Crear una instancia del mapa
+        var mymap = L.map('mapid').setView([19.458378923437255, -96.9500104568453], 18);
+
+        // Agregar capa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(mymap);
+
+        // Agregar un marcador
+        var marker = L.marker([19.458378923437255, -96.9500104568453]).addTo(mymap);
+      </script>
+    </section>
+  </main>
+  <footer>
+    <p>Derechos reservados © 2023</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>

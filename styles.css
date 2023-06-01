@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+  font-family: GoogolplexFont2;
+  margin: 0;
+  padding: 0;
+}
+/* Fuentes personalizadas */
+@font-face {
+  font-family: GoogolplexFont;
+  src: url(fonts/Arvo-Regular.ttf);
+}
+
+@font-face {
+  font-family: GoogolplexFont2;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: GoogolplexFont3;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  background-color: #0000cd;
+  color: #fff;
+  display: flex;
+  font-family: GoogolplexFont3;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 1em;
+}
+
+nav a {
+  color: #fff;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #ffa500;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #fffacd;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Estilos para las secciones */
+section {
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 1em;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #ffa500;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.logo-img {
+  width: 180px;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 20px; /* Ajusta el margen derecho según tu preferencia */
+}
+
+
+
+/*Animacion de el secmento del menu*/
+.menu-link {
+  transition: background-color 0.5s ease;
+}

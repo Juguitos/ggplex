@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Googolplex</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <style>
+    .main-image {
+    text-align: center;
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    position: relative; /* Agrega posicionamiento relativo al contenedor */
+    }
+
+    .main-image img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+    .small-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .main-image .image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    }
+
+    .small-image {
+      width: 150px;
+      margin: 10px;
+    }
+
+    .small-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .small-image p {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    } 
+
+    .small-image {
+      width: calc(20% - 20px); /* Reduce el ancho en un 20% y resta 20px para el margen */
+      text-align: center;
+    }
+
+    .small-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .small-image h3,
+    .small-image p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="img/logo.png" alt="Logo de mi sitio web">
+    </div>    
+    <nav>
+      <ul class="animated-list">
+        <li><a class="menu-link" href="index.html">Inicio</a></li>
+        <li><a class="menu-link" href="acerca.html">Nosotros</a></li>
+        <li><a class="menu-link" href="productos.html">Productos</a></li>
+        <li><a class="menu-link" href="contacto.html">Contacto</a></li>
+      </ul>      
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home">
+      <h2>Googolplex seguridad industrial</h2>
+      
+      <div class="main-image">
+        <img src="img/main.webp" alt="Imagen principal">
+        <div class="image-text">Tu seguridad es lo mejor</div>
+      </div>      
+      
+      <div class="container">
+        <div class="small-images">
+          <div class="small-image">
+            <h3>Equipo de Seguridad</h3>
+            <img src="img/seguridad.webp" alt="img-seguridad">
+            <p>Protección visual, auditiva, cabeza, corporal</p>
+          </div>
+          <div class="small-image">
+            <h3>Señalamientos</h3>
+            <img src="img/señalamientos.webp" alt="img-señalamientos">
+            <p>Señalamientos establecidos y personalizados</p>
+          </div>
+          <div class="small-image">
+            <h3>Equipo de emergencia</h3>
+            <img src="img/emergencia.webp" alt="img-emergencia">
+            <p>Alarmas</p>
+          </div>
+          <div class="small-image">
+            <h3>Extintores</h3>
+            <img src="img/extintores.webp" alt="img-extintires">
+            <p>Venta, mantenimiento y recarga</p>
+          </div>
+          <div class="small-image">
+            <h3>Seguridad vial</h3>
+            <img src="img/seguridad vial.webp" alt="img-seguidad-vial">
+            <p>Protección para calles, carreteras y equipo de transito</p>
+          </div>
+          <div class="small-image">
+            <h3>Cursos</h3>
+            <img src="img/cursos.webp" alt="img-cursos">
+            <p><p>Asesoria, Cursos, Capacitaciónes</p></p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+  <footer>
+    <p>Derechos reservados © 2023</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
